@@ -1,75 +1,114 @@
-# Computer Network Project
+# 🌐 Computer Network Project – BRACU Campus Network Design
 
-## **The Project is based on the following specifications given below**
-___
-*Clone the repo and download the packet tracer file with .pkt extension for your use*
-___
+> A complete enterprise-level network topology designed for BRAC University (BRACU),
+> built using Cisco Packet Tracer with VLSM, NAT, ACLs, and inter-school routing.
 
-* Image of Network Topology
-![Network Topology](https://github.com/JoyKrishan/Undergraduate-Projects/blob/master/Computer%20Networks%20Project/Packet.JPG)
+---
 
+## 📁 Repository Contents
 
+| File | Description |
+|------|-------------|
+| `CSE421LABPRO.pkt` | Cisco Packet Tracer project file |
+| `Packet.JPG` | Network topology diagram |
+| `[CSE421][Project-05]BRACU.docx` | Full project documentation |
 
+> 💡 Clone the repo and open the `.pkt` file in Cisco Packet Tracer to explore the topology.
 
-## Specifications
-___
-BRACU has the following major schools and institutes with the mentioned characteristics 
+---
 
-●	SECS
-○	2 departments, CSE and EEE
-○	Largest school
-○	16 labs (700 pc) [14 normal, 2 research lab]
-○	90 faculty members and stuffs
-○	More than 800 ip is needed. First 600 will be for students, rest for faculty members, staff and research purposes
-○	Connects through the internet.
-○	Have a local server of Youtube.com and usis.bracu.ac.bd
-○	Can afford only 3 real IP
+## 🗺️ Network Topology
 
-●	BBS
-○	2nd largest
-○	3 labs for students
-○	50 faculty members and stuffs
-○	Total 300 IPs needed, but they can afford only 20 real IPs
+![Network Topology](Packet.JPG)
 
-●	School of Law
-○	They are strict
-○	Only 14 faculty members and they do not want their ip address to be changed randomly
+---
 
-●	James P. Grant School of Public Health
-○	Research based school
-○	Their ips also need to be fixed for research purpose
-○	20 pc needed
+## 🏫 Network Specifications
 
-●	BIL
-○	70 faculty members and stuffs
-○	Listening  lab with 15 pc for students
+### SECS (School of Engineering & Computer Science)
+- 2 departments: **CSE** and **EEE**
+- Largest school on campus
+- 16 labs (700 PCs) — 14 normal + 2 research labs
+- 90 faculty members and staff
+- **800+ IPs required** — first 600 for students, rest for faculty/staff/research
+- Connected to the internet
+- Local servers: `youtube.com` and `usis.bracu.ac.bd`
+- Can afford only **3 real IPs**
 
+### BBS (BRAC Business School)
+- 2nd largest school
+- 3 student labs
+- 50 faculty members and staff
+- **300 IPs required**, only **20 real IPs** available
 
+### School of Law
+- 14 faculty members
+- **Static IPs required** (no dynamic assignment)
 
-Outside the BRACU
-:
-●	Assume that this is the outside network for the BRACU that they use to connect to the internet.
-●	Has a single web server (browseable)
+### James P. Grant School of Public Health
+- Research-based school
+- **Fixed/static IPs** required for research purposes
+- 20 PCs
 
-Common rules
-❏	Student cannot access youtube’s local server
-❏	Faculty members and staff can access youtube.com 
-❏	Students of research labs can access youtube.com
-❏	James P. Grant School of public health does not allow other schools to connect with their network.
-❏	SECS and BIL can connect with each other, but the rest cannot access BIL.
+### BIL
+- 70 faculty members and staff
+- Listening lab with 15 student PCs
 
-Overall Specifications:
-●	Use Routers and Switches where appropriate.
-●	You may need to apply VLSM more than once
-●	Packets from any other place/network is automatically denied. 
-●	Install at least 2 PC/Laptop for each individual network.
-●	SECS department should have a backup route to the internet
-●	Use summarization if needed anywhere
-●	Use at least one network with static routing, and for others use RIPv2.
-●	You may use at max two PCs to represent all the hosts of a network (no need to put in 32 PCs if it says there are 32 people in the area.
+### Outside Network (Internet)
+- Simulates the external internet connection for BRACU
+- Contains a single browseable **web server**
 
+---
 
-Deliverables:
-The network mentioned above should be implemented in packet tracer, with necessary devices and full configuration.
-After completion you should be able to test the conditions imposed.
-As hardcopies, you will have to submit the network topology diagram with proper labels and also all the configurations of all the routers that you have implemented.
+## 📋 Access Control Rules (ACL Policies)
+
+| Rule | Details |
+|------|---------|
+| 🚫 Students | Cannot access the local YouTube server |
+| ✅ Faculty & Staff | Can access `youtube.com` |
+| ✅ Research Lab Students | Can access `youtube.com` |
+| 🔒 James P. Grant School | Does **not** allow connections from other schools |
+| 🔗 SECS ↔ BIL | Can connect with each other |
+| 🚫 Other Schools → BIL | Cannot access BIL |
+| 🚫 External Packets | Automatically denied |
+
+---
+
+## ⚙️ Technical Implementation
+
+- ✅ VLSM (Variable Length Subnet Masking) — applied multiple times
+- ✅ NAT for schools with limited real IPs
+- ✅ Static routing for Law School and Public Health
+- ✅ ACLs for access control enforcement
+- ✅ Backup route to internet for SECS
+- ✅ Route summarization where applicable
+- ✅ Minimum 2 PCs/Laptops per individual network
+- ✅ Routers and Switches used appropriately
+
+---
+
+## 🚀 Getting Started
+
+1. Clone the repository
+```bash
+   git clone https://github.com/H-Shahriar/Computer-Network-Project.git
+```
+2. Open `CSE421LABPRO.pkt` in **Cisco Packet Tracer**
+3. Explore the topology and configurations
+
+---
+
+## 🛠️ Tools Used
+
+- **Cisco Packet Tracer** – Network simulation
+- **VLSM** – IP address planning
+- **ACL** – Access control
+- **NAT/PAT** – IP translation
+- **OSPF / Static Routing** – Routing protocols
+
+---
+
+## 👤 Author
+
+**Hasan Shahriar**
+Capstone Project – CSE421 | BRAC University, 2025
